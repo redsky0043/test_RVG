@@ -70,8 +70,23 @@ $font-family-primary: 'Lato', sans-serif;
 
 .section-first {
 	width: 100%;
-	height: 1500px;
-	background-image: url(./src/img/boy.jpg);
+	height: 660px;
+	color: $palette-primary;
 	background-position: top;
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	font-family: $font-family-primary;
+	background-image: url(./src/img/boy.jpg);
+	
+	&__title {
+		padding-top: 250px;
+		font-weight: 900;
+		font-size: 48px;
+	}
+
+	&__subtitle {
+		margin-top: 21px;
+		max-width: 460px;
+		font-size: 18px;
+		line-height: 30px;
+	}
 }
