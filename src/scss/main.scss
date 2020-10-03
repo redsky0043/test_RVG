@@ -1,5 +1,77 @@
-$color: pink;
+* {
+	margin: 0;
+	padding: 0;
+}
 
-body{
-	background-color: orangered;
+// Внутренние переменные
+$x-color-white: #ffffff;
+$x-color-gray: #454546;
+$x-color-blue: #00b5d2;
+$x-transition-3s: all ease .3s;
+
+// Глобальные переменные
+$palette-primary: $x-color-white;
+$palette-secondary: $x-color-gray;
+$palette-active: $x-color-blue;
+$font-family-primary: 'Lato', sans-serif;
+
+.container {
+	max-width: 1140px;
+	height: 100%;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 110px;
+	width: 100%;
+	position: fixed;
+
+	&::before {
+		content: "";
+		position: fixed;
+    	height: 110px;
+    	width: 100%;
+		z-index: -1;
+		backdrop-filter: blur(5px);
+	}
+
+	&__wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		width: 284px;
+		display: flex;
+		justify-content: space-between;
+		color: $palette-secondary;
+		
+		&__item {
+			font-size: 16px;
+			cursor: pointer;
+			padding: 43px 0 43px 0;
+			text-transform: uppercase;
+			font-family: $font-family-primary;
+			border-bottom: 5px solid #ffffff00;
+			
+			&:hover {
+				color: $palette-primary;
+				border-bottom: 5px solid $palette-active;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, .35);
+				transition: $x-transition-3s;
+			}
+			
+		}
+	}
+}
+
+.section-first {
+	width: 100%;
+	height: 1500px;
+	background-image: url(./src/img/boy.jpg);
+	background-position: top;
+    background-repeat: no-repeat;
 }
