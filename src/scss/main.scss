@@ -27,8 +27,8 @@ $line-height-paragraph: 30px;
 }
 
 @font-face {
-    font-family: 'SocialIcons';
-    src: url(../fonts/SocialIcons.otf) format('opentype');
+	font-family: "SocialIcons";
+	src: url(../fonts/SocialIcons.otf) format("opentype");
 }
 
 .container {
@@ -214,7 +214,6 @@ $line-height-paragraph: 30px;
 		&__btn {
 			padding: 18px 81px;
 			margin-top: 35px;
-			// margin-bottom: 70px;
 		}
 	}
 }
@@ -251,25 +250,28 @@ $line-height-paragraph: 30px;
 
 .section-fifth {
 	margin-top: 62px;
+	display: flex;
+	justify-content: space-between;
 
-	&__wrapper {
-		display: flex;
-		justify-content: space-between;
-		
-		&__left {
-			font-family: 'SocialIcons';
-			width: 100%;
-			height: 300px;
-			background-color: red;
-		}
-		
-		&__right {
-			width: 100%;
-			height: 300px;
-			background-color: blue;
-		}
+	&__left {
+		width: 50%;
+		background-color: red;
+	}
+
+	&__right {
+		width: 50%;
+		background-color: blue;
 	}
 }
+
+
+
+
+
+
+
+
+
 
 
 
