@@ -1,7 +1,8 @@
 const path = require('path');
 const miniCss = require('mini-css-extract-plugin');
 const minify = require('optimize-css-assets-webpack-plugin');
- 
+const webpack = require('webpack');
+
 module.exports = {
 	mode: 'production',
 	entry: './src/index.js',
@@ -11,7 +12,7 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			test:/.(s*)css$/,
+			test: /.(s*)css$/,
 			use: [
 				miniCss.loader,
 				'css-loader?url=false',
@@ -27,6 +28,11 @@ module.exports = {
 	plugins: [
 		new miniCss({
 			filename: '../style.css',
+		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery'
 		}),
 	]
 };
