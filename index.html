@@ -13,7 +13,6 @@
 <body>
 
     <header class="header">
-        <div class="header__background"></div>
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
@@ -21,35 +20,59 @@
                 </div>
                 <ul class="header__nav">
                     <li class="header__nav__item">
-                        home
+                        <a class="header__nav__item__link" href="#">
+                            home
+                        </a>
                     </li>
                     <li class="header__nav__item">
-                        about us
+                        <a class="header__nav__item__link" href="#">
+                            about us
+                        </a>
                     </li>
                     <li class="header__nav__item">
-                        contact
+                        <a class="header__nav__item__link" href="#">
+                            contact
+                        </a>
                     </li>
                 </ul>
+
+                <button class="header__arrow" onclick="dropDown()">
+                    <img class="header__arrow__img dropbtn" src="./src/img/next.png" alt="arrow">
+                </button>
+
             </div>
+        </div>
+        <div class="header-dropdown test " id="dropdown">
+            <nav  class="header-dropdown__content">
+                <a class="header-dropdown__content__item" href="#home">
+                    home
+                </a>
+                <a class="header-dropdown__content__item" href="#about">
+                    about us
+                </a>
+                <a class="header-dropdown__content__item" href="#contact">
+                    contact
+                </a>
+            </nav>
         </div>
     </header>
 
     <section class="section-first">
         <div class="container">
-            <div class="section-first__title">
+            <h1 class="section-first__title">
                 We can <span class="section-first__wrapper"> help </span> .
-            </div>
-            <div class="section-first__subtitle">
+            </h1>
+            <p class="section-first__subtitle">
                 Teaching independence to the lives of the people you love with reliable, individualized emotional and
                 behavioral therapy.
-            </div>
+            </p>
             <button class="section-first__btn btn btn-orange">
                 find help here
             </button>
         </div>
     </section>
 
-    <section class="section-brands">
+    <div class="section-brands">
         <div class="brands-container">
             <div class="section-brands__brand owl-carousel owl-theme">
                 <div class="section-brands__brand__img">
@@ -72,18 +95,18 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="section-second">
         <div class="container">
             <div class="section-second__wrapper">
-                <div class="section-second__wrapper__title">
+                <h1 class="section-second__wrapper__title">
                     Support For People Of All Walks of Life
-                </div>
-                <div class="section-second__wrapper__subtitle">
+                </h1>
+                <p class="section-second__wrapper__subtitle">
                     Children as young as 2 years old may begin to develop behaviors which need extra support and
                     attention.
-                </div>
+                </p>
                 <img class="section-second__wrapper__img" src="/src/img/people.png" alt="people">
             </div>
         </div>
@@ -92,13 +115,13 @@
     <section class="section-third">
         <div class="container">
             <div class="section-third__wrapper">
-                <div class="section-third__wrapper__title">
+                <h1 class="section-third__wrapper__title">
                     McGrew Behavior Services Helps...
-                </div>
-                <div class="section-third__wrapper__subtitle">
+                </h1>
+                <p class="section-third__wrapper__subtitle">
                     Families, organizations and health care providers in Northern California. Our knowledge and <br>
                     experience provide the specialized support people need when overcoming behavioral challenges.
-                </div>
+                </p>
                 <button class="section-third__wrapper__btn btn btn-orange">
                     contact us
                 </button>
@@ -187,16 +210,19 @@
             </a>
         </div>
     </footer>
-    <subfooter class="subfooter">
-        copyright Ⓒ 2017 mcGrews behavior services all rights reserved
-    </subfooter>
+    <hr class="footer-line" >
+    <div class="subfooter">
+        <div class="container">
+            copyright Ⓒ 2017 mcGrews behavior services all rights reserved
+        </div>
+    </div>
 
 
 
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="dist/bundle.js"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 
 </html>
