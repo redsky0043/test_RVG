@@ -2,15 +2,19 @@
   "name": "test_rvg",
   "version": "1.0.0",
   "description": "",
+  "homepage": "http://redsky0043.github.io/test_RVG",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^4.3.0",
+    "gh-pages": "^3.1.0",
     "mini-css-extract-plugin": "^0.11.3",
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
