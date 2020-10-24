@@ -130,11 +130,12 @@ a {
 
 	&::before {
 		content: "";
-		background-color: #0000002d;
+		// background-color: #0000002d;
 		position: fixed;
 		height: 110px;
 		width: 100%;
 		z-index: -1;
+		backdrop-filter: blur(6px);
 	}
 
 	&__wrapper {
@@ -198,11 +199,12 @@ a {
 
 		&::before {
 			content: "";
-			background-color: #0000002d;
+			// background-color: #0000002d;
 			position: fixed;
 			height: 150px;
 			width: 100%;
 			z-index: -1;
+			backdrop-filter: blur(6px);
 		}
 
 		&__content {
